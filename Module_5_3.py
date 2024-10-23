@@ -51,7 +51,8 @@ class House:
 
 
     def __add__(self, value):
-        self.number_of_floors += value
+        if isinstance(self.number_of_floors, int) and isinstance(value, int):
+            self.number_of_floors += value
         return self
 
 
